@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body style="background-color:black;">
+
+<!-- header section starts  -->
+
+<header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+
+    <a href="#" class="logo"><span>Travel</span></a>
+
+    <nav class="navbar">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About Us</a>
+        <a href="./index.html">Packages</a>
+        <a href="./index.html">Review</a>
+        <a href="./index.html">Contact Us</a>
+    </nav>
+
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+    </div>
+
+</header>
+
+    <section class="registration">
+        <div class="register-form">
+            <h1>Register <span>Here</span></h1>
+            <form action="" onsubmit="return validateform()">
+
+            <input type="text" name="myname1" placeholder="Name" id="name" required>
+            <input type="email" name="myemail" placeholder="Email-Id" id="" required>
+            <input type="tel" name="myphone" placeholder="Phone No." id="phonenum" required>
+            <input type="number" name="myage" placeholder="Age" id="" required>
+            <h4>Gender</h4>
+            <input type="radio" name="mygender" id="" required> Male &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <input type="radio" name="mygender" id=""> Female
+            <h4>Departure</h4>
+            <input type="datetime-local" name="departuredate" id="" required>
+            <h4>Return</h4>
+            <input type="datetime-local" name="returndate" id="" required>
+            <h4>Travel Destination</h4>
+            <input type="checkbox" name="td" id=""> Kashmir &nbsp; &nbsp; &nbsp;
+            <input type="checkbox" name="td" id=""> Kerala &nbsp; &nbsp; &nbsp;
+            <input type="checkbox" name="td" id=""> Udaipur &nbsp; &nbsp; &nbsp;
+            <input type="checkbox" name="td" id=""> Bali &nbsp; &nbsp; &nbsp;
+            <input type="checkbox" name="td" id=""> Dubai &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="checkbox" name="td" id=""> Manali &nbsp; &nbsp; &nbsp; 
+            <input type="checkbox" name="td" id=""> Lansdowne &nbsp; &nbsp; &nbsp;
+            <input type="checkbox" name="td" id=""> Odisha &nbsp; &nbsp; &nbsp;
+            <br> <br>
+            <h4>Package</h4>
+            <input type="radio" name="locations" id="loc1" required> Bronze &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc1"> Silver &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc1"> Gold &nbsp; &nbsp; &nbsp;
+            <br> <br> 
+            <input type="checkbox" name="t&c" id="" checked required> I accept the Terms & Conditions.
+            <br> <br> 
+            <input type="submit" value="Submit" class="submitbtn">
+
+        </form>
+        </div>
+    </section>
+
+
+
+<!-- Javascript -->
+<script>
+    function validateform(){ 
+        var tel=document.getElementById("phonenum").value;  
+
+        if(tel.length<10){  
+            alert("Phone number must be of atleast 10 digits!");  
+            return false;  
+        } else if(isNaN(tel)){
+            alert("Phone number should not include character!");
+            return false;
+        }
+        return true;
+}  
+</script>
+
+</body>
+</html>
